@@ -30,7 +30,7 @@ local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:FindFirstChild("Humanoid")
 local HRP = character:FindFirstChild("HumanoidRootPart")
-
+Ded = false
 while true do
     local Cripple = workspace:FindFirstChild("Cripple")
     local Arlo = workspace:FindFirstChild("Arlo")
@@ -41,20 +41,25 @@ while true do
     local Remi = workspace:FindFirstChild("Remi")
     local Zeke = workspace:FindFirstChild("Zeke")
     local Crail = workspace:FindFirstChild("Crail")
-    local NPCs = {John,Sera} -- CHANGE THIS TO THE NPCS YOU WANT, EXAMPLE: {Sera,John,Arlo}
+    local NPCs = {Remi,Zeke,Isen,Blyke} -- CHANGE THIS TO THE NPCS YOU WANT, EXAMPLE: {Sera,John,Arlo}
+    print("load")
     local NPC = math.random(1, #NPCs)
+    print("blam")
     local NPCChosen = NPCs[NPC]
-    local old = NPCChosen
     if NPCChosen and NPCChosen.Humanoid.Health >= 10 then
-        repeat
+        Ded = false
+        while Ded == false do
+            humanoid:MoveTo(NPCChosen.HumanoidRootPart.Position + Vector3.new(0,0,3))
             local dist = (HRP.Position - NPCChosen.HumanoidRootPart.Position).Magnitude
             if dist <= 5 then
-                game.ReplicatedStorage.Punch:FireServer(NPCChosen.Humanoid,6,0,"DamageMultiplier:2")
+                game.ReplicatedStorage.Punch:FireServer(NPCChosen.Humanoid,6,0,"DamageMultiplier:1")
                 game.ReplicatedStorage.Knockback:FireServer(NPCChosen,2)
             end
-            humanoid:MoveTo(NPCChosen.HumanoidRootPart.Position + Vector3.new(0,0,3))
-            Wait(0.05)
-        until NPCChosen.Humanoid.Health <= 0
+            if NPCChosen.Humanoid.Health <= 0 then
+                Ded = true
+            end
+            Wait(0.5)
+        end
     end
-    Wait(0.05)
+    Wait(0.5)
 end
