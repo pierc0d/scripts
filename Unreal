@@ -12,7 +12,7 @@ repeat
         repeat
             game.ReplicatedStorage.Damage:FireServer("Detonate",John,18,{})
             wait(0.0001)
-        until John.Health <= 0
+        until John:FindFirstChild("Health") <= 0
     else
        print("ArloTime")
        local Arlo = workspace.Arlo.Humanoid
