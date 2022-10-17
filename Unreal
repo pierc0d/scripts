@@ -4,8 +4,10 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(functio
 	print('gave ability')
 	game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
 end)
+game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
 game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
 repeat
+    game.ReplicatedStorage.TakeQuest:FireServer("Completed")
     if workspace.John then
         local John = workspace.John.Humanoid
         repeat
