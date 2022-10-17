@@ -1,24 +1,76 @@
 function KillAll()
     for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "John" and v.Humanoid then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v.Humanoid,18,{})
+        if v:IsA("Model") and v.Name == "John" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
             game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+            end
         end
     end
     for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Arlo" and v.Humanoid then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v.Humanoid,18,{})
+        if v:IsA("Model") and v.Name == "Arlo" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
             game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+            end
         end
     end
     for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Barrier" and v.Humanoid then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v.Humanoid,18,{})
+        if v:IsA("Model") and v.Name == "Barrier" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
             game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Isen" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Seraphina" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Remi" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Blyke" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Zeke" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+            end
         end
     end
 end
+function AutoQuest()
+    wait(10)
+    game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
+    wait(10)
+    game.ReplicatedStorage.TakeQuest:FireServer("Completed")
+end
 while true do
     KillAll()
-    wait(0.001)
+    wait(0.01)
 end
