@@ -1,0 +1,67 @@
+debounce = false
+function KillGodTiers()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "John" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+        if v:IsA("Model") and v.Name == "Barrier" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+        if v:IsA("Model") and v.Name == "Arlo" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+    end
+end
+function KillAura()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Seraphina" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Needles",v:FindFirstChild("Humanoid"),0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "John" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Needles",v:FindFirstChild("Humanoid"),0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Barrier" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Needles",v:FindFirstChild("Humanoid"),0)
+            end
+        end
+    end
+end
+function Activation()
+    while debounce == true do
+        game.ReplicatedStorage.TakeQuest:FireServer("Completed")
+        KillGodTiers()
+        wait(0.0001)
+    end
+end
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Pierc0d's Hub V1", "DarkTheme")
+local UnReal = Window:NewTab("UnReal")
+local UnRealSection = UnReal:NewSection("Functions")
+local UnFair = Window:NewTab("UnFair")
+local UnFairSection = UnFair:NewSection("WIP")
+UnRealSection:NewToggle("Start John Farm", "BOMBER IS NEEDED", function(state)
+    if state then
+        debounce = true
+        Activation()
+    else
+        debounce = false
+    end
+end)
