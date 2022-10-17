@@ -46,7 +46,6 @@ function KillAura()
 end
 function Activation()
     while debounce == true do
-        game.ReplicatedStorage.TakeQuest:FireServer("Completed")
         KillGodTiers()
         wait(0.01)
     end
