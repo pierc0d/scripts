@@ -1,4 +1,28 @@
 debounce = false
+AutoQuestDebounce = false
+local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
 function KillGodTiers()
     for i, v in pairs(game.Workspace:GetChildren()) do
         if v:IsA("Model") and v.Name == "John" then
@@ -44,9 +68,16 @@ function KillAura()
         end
     end
 end
+function AutoQuest()
+    while AutoQuestDebounce == true do
+    game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
+    wait(20)
+    end
+end
 function Activation()
     while debounce == true do
         KillGodTiers()
+        game.ReplicatedStorage.TakeQuest:FireServer("Completed")
         wait(0.01)
     end
 end
@@ -54,13 +85,30 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Pierc0d's Hub V1", "DarkTheme")
 local UnReal = Window:NewTab("UnReal")
 local UnRealSection = UnReal:NewSection("Functions")
-local UnFair = Window:NewTab("UnFair")
-local UnFairSection = UnFair:NewSection("WIP")
 UnRealSection:NewToggle("John and Arlo Farm", "BOMBER IS NEEDED", function(state)
     if state then
         debounce = true
         Activation()
     else
         debounce = false
+    end
+end)
+UnRealSection:NewToggle("Auto Quest", "Auto Quest4", function(state)
+    if state then
+        AutoQuestDebounce = true
+        AutoQuest()
+    else
+        AutoQuestDebounce = false
+    end
+end)
+local UnFair = Window:NewTab("UnFair")
+local UnFairSection = UnFair:NewSection("WIP")
+local Universal = Window:NewTab("Universal")
+local UniversalSection = Universal:NewSection("Functions")
+UniversalSection:NewToggle("Noclip", "Enables and Disables Noclip", function(state)
+    if state then
+        noclip()
+    else
+        clip()
     end
 end)
