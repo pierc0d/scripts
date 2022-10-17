@@ -1,6 +1,6 @@
 debounce = true
 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
-	wait(3)
+	wait(5)
 	print('gave ability')
 	game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
 end)
