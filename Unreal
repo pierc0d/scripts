@@ -1,22 +1,5 @@
-debounce = true
-game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
-	wait(3)
-	print('gave ability')
-	game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
-end)
-game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
-game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
-repeat
-    if workspace.John then
-        local John = workspace.John.Humanoid
-        repeat
-            game.ReplicatedStorage.Damage:FireServer("Detonate",John,18,{})
-            wait(0.0001)
-        until John.Health <= 0
-    else
-       print("Waiting for a John")
-    end
-    if workspace.Arlo then
+function Arlo()
+    if workspace.Arlo and workspace.Arlo.Parent == workspace then
         print("ArloTime")
        local Arlo = workspace.Arlo.Humanoid
         repeat
@@ -35,5 +18,32 @@ repeat
     else
         print("Waiting for Arlo")
     end
-    wait(0.001)
+end
+function John()
+    if workspace.John then
+        local John = workspace.John.Humanoid
+        repeat
+            game.ReplicatedStorage.Damage:FireServer("Detonate",John,18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{
+                        ["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+                        ["Charge"] = 1
+                    },0)
+            wait(0.0001)
+        until John.Health <= 0
+    else
+       print("Waiting for a John")
+       Arlo()
+    end
+end
+debounce = true
+game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
+	wait(5)
+	print('gave ability')
+	game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
+end)
+game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
+game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
+repeat
+    John()
+    wait(0.0001)
 until debounce == false
