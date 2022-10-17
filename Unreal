@@ -1,4 +1,10 @@
 debounce = true
+game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
+	wait(3)
+	print('gave ability')
+	game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
+end)
+game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
 repeat
     if workspace.John then
         local John = workspace.John.Humanoid
