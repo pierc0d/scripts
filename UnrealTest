@@ -32,14 +32,6 @@ function KillAll()
         end
     end
     for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Seraphina" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
-            end
-        end
-    end
-    for i, v in pairs(game.Workspace:GetChildren()) do
         if v:IsA("Model") and v.Name == "Remi" then
             if v:FindFirstChild("Humanoid") then
             game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
