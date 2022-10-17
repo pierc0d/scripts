@@ -7,9 +7,8 @@ end)
 game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
 game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
 repeat
-    game.ReplicatedStorage.TakeQuest:FireServer("Completed")
     if workspace.John then
-        local John = workspace.John.Humanoid
+        local John = workspace:FindFirstChild("John")
         repeat
             game.ReplicatedStorage.Damage:FireServer("Detonate",John,18,{})
             wait(0.0001)
