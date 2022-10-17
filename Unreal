@@ -1,6 +1,6 @@
 debounce = true
 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
-	wait(5)
+	wait(3)
 	print('gave ability')
 	game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
 end)
@@ -32,6 +32,8 @@ repeat
             game.ReplicatedStorage.Damage:FireServer("Detonate",Arlo,18,{})
             wait(0.0001)
         until Arlo.Health <= 0
+    else
+        print("Waiting for Arlo")
     end
     wait(0.001)
 until debounce == false
