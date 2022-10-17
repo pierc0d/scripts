@@ -57,7 +57,7 @@ local UnReal = Window:NewTab("UnReal")
 local UnRealSection = UnReal:NewSection("Functions")
 local UnFair = Window:NewTab("UnFair")
 local UnFairSection = UnFair:NewSection("WIP")
-UnRealSection:NewToggle("Start John Farm", "BOMBER IS NEEDED", function(state)
+UnRealSection:NewToggle("John and Arlo Farm", "BOMBER IS NEEDED", function(state)
     if state then
         debounce = true
         Activation()
