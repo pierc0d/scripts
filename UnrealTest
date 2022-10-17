@@ -56,13 +56,13 @@ function KillAll()
         end
     end
 end
-function AutoQuest()
-    wait(10)
-    game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
-    wait(10)
-    game.ReplicatedStorage.TakeQuest:FireServer("Completed")
-end
-while true do
+Activation()
     KillAll()
     wait(0.01)
 end
+game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
+	wait(10)
+	game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
+	Activation()
+end)
+Activation()
