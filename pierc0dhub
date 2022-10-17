@@ -1,4 +1,5 @@
-debounce = false
+JohnDebounce = false
+ArloDebounce = false
 AutoQuestDebounce = false
 local Noclip = nil
 local Clip = nil
@@ -23,47 +24,28 @@ function clip()
 	Clip = true
 end
 
-function KillGodTiers()
+function John()
     for i, v in pairs(game.Workspace:GetChildren()) do
         if v:IsA("Model") and v.Name == "John" then
             if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
-            end
-        end
-        if v:IsA("Model") and v.Name == "Barrier" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
-            end
-        end
-        if v:IsA("Model") and v.Name == "Arlo" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
             end
         end
     end
 end
-function KillAura()
-    for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Seraphina" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Needles",v:FindFirstChild("Humanoid"),0)
-            end
-        end
-    end
-    for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "John" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Needles",v:FindFirstChild("Humanoid"),0)
-            end
-        end
-    end
+function Arlo()
     for i, v in pairs(game.Workspace:GetChildren()) do
         if v:IsA("Model") and v.Name == "Barrier" then
             if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Needles",v:FindFirstChild("Humanoid"),0)
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+        if v:IsA("Model") and v.Name == "Arlo" then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
             end
         end
     end
@@ -74,23 +56,38 @@ function AutoQuest()
     wait(20)
     end
 end
-function Activation()
-    while debounce == true do
-        KillGodTiers()
+function ActivationJohn()
+    while JohnDebounce == true do
+        John()
+        game.ReplicatedStorage.TakeQuest:FireServer("Completed")
+        wait(0.01)
+    end
+end
+function ActivationArlo()
+    while ArloDebounce == true do
+        Arlo()
         game.ReplicatedStorage.TakeQuest:FireServer("Completed")
         wait(0.01)
     end
 end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Pierc0d's Hub V1.01", "DarkTheme")
+local Window = Library.CreateLib("Pierc0d's Hub V1", "DarkTheme")
 local UnReal = Window:NewTab("UnReal")
 local UnRealSection = UnReal:NewSection("Functions")
-UnRealSection:NewToggle("John and Arlo Farm", "BOMBER IS NEEDED", function(state)
+UnRealSection:NewToggle("John Farm", "BOMBER IS NEEDED", function(state)
     if state then
-        debounce = true
-        Activation()
+        JohnDebounce = true
+        ActivationJohn()
     else
-        debounce = false
+        JohnDebounce = false
+    end
+end)
+UnRealSection:NewToggle("Arlo Farm", "BOMBER IS NEEDED", function(state)
+    if state then
+        ArloDebounce = true
+        ActivationArlo()
+    else
+        ArloDebounce = false
     end
 end)
 UnRealSection:NewToggle("Auto Quest", "Auto Quest4", function(state)
