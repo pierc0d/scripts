@@ -1,0 +1,24 @@
+function KillAll()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "John" and v.Humanoid then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v.Humanoid,18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Arlo" and v.Humanoid then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v.Humanoid,18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Barrier" and v.Humanoid then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v.Humanoid,18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,["Charge"] = 1},0)
+        end
+    end
+end
+while true do
+    KillAll()
+    wait(0.001)
+end
