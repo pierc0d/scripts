@@ -48,7 +48,7 @@ function Activation()
     while debounce == true do
         game.ReplicatedStorage.TakeQuest:FireServer("Completed")
         KillGodTiers()
-        wait(0.0001)
+        wait(0.01)
     end
 end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
