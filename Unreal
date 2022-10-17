@@ -1,0 +1,24 @@
+debounce = true
+repeat
+    if workspace.John then
+        local John = workspace.John.Humanoid
+        repeat
+            game.ReplicatedStorage.Damage:FireServer("Detonate",John,18,{})
+            wait(0.0001)
+        until John.Health <= 0
+    else
+        if workspace.Arlo then
+        local Arlo = workspace.Arlo.Humanoid
+        repeat
+            for i, v in pairs(game.Workspace:GetChildren()) do
+                if v:IsA("Model") and v.Name == "Barrier" then
+                    game.ReplicatedStorage.Damage:FireServer("Detonate",v.Humanoid,18,{})
+                end
+            end
+            game.ReplicatedStorage.Damage:FireServer("Detonate",Arlo,18,{})
+            wait(0.0001)
+            until Arlo.Health <= 0
+        end
+    end
+    wait(0.001)
+until debounce == false
