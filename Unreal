@@ -33,7 +33,7 @@ end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Unreal V1.1", "DarkTheme")
 local Main = Window:NewTab("Stuff")
-local MainSection = Main:NewSection("Auto Farm")
+local MainSection = Main:NewSection("Functions")
 MainSection:NewToggle("Start John Farm", "BOMBER IS NEEDED", function(state)
     if state then
         debounce = true
