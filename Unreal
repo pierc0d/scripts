@@ -7,8 +7,8 @@ repeat
             wait(0.0001)
         until John.Health <= 0
     else
-        if workspace.Arlo then
-        local Arlo = workspace.Arlo.Humanoid
+       print("ArloTime")
+       local Arlo = workspace.Arlo.Humanoid
         repeat
             for i, v in pairs(game.Workspace:GetChildren()) do
                 if v:IsA("Model") and v.Name == "Barrier" then
@@ -19,6 +19,5 @@ repeat
             wait(0.0001)
             until Arlo.Health <= 0
         end
-    end
     wait(0.001)
 until debounce == false
