@@ -1,50 +1,116 @@
-function Arlo()
-    if workspace.Arlo then
-        print("ArloTime")
-       local Arlo = workspace.Arlo.Humanoid
-        repeat
-            for i, v in pairs(game.Workspace:GetChildren()) do
-                if v:IsA("Model") and v.Name == "Barrier" then
-                    game.ReplicatedStorage.Cast:FireServer("Detonate",{
-                        ["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
-                        ["Charge"] = 1
-                    },0)
-                    game.ReplicatedStorage.Damage:FireServer("Detonate",v.Humanoid,18,{})
-                end
+debounce = false
+debounce1 = false
+function KillGodTiers()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "John" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
             end
-            game.ReplicatedStorage.Damage:FireServer("Detonate",Arlo,18,{})
-            wait(0.0001)
-        until Arlo.Health <= 0
-    else
-        print("Waiting for Arlo")
+        end
+        if v:IsA("Model") and v.Name == "Barrier" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+        if v:IsA("Model") and v.Name == "Arlo" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
     end
 end
-function John()
-    if workspace.John then
-        print("JohnTime")
-        local John = workspace.John.Humanoid
-        repeat
-            game.ReplicatedStorage.Damage:FireServer("Detonate",John,18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{
-                        ["Mousepos"] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
-                        ["Charge"] = 1
-                    },0)
-            wait(0.0001)
-        until John.Health <= 0
-    else
-       print("Waiting for a John")
-       Arlo()
+function KillAll()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "John" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Arlo" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Barrier" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Isen" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Remi" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = ggame.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Blyke" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Zeke" then
+            if v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
+            end
+        end
     end
 end
-debounce = true
-game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
-	wait(5)
-	print('gave ability')
-	game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
+function Activation()
+    while debounce == true do
+        game.ReplicatedStorage.TakeQuest:FireServer("Completed")
+        KillGodTiers()
+        wait(0.0001)
+    end
+end
+function KillAllActivation()
+    while debounce1 == true do
+        game.ReplicatedStorage.TakeQuest:FireServer("Completed")
+        KillAllActivation()
+        wait(0.05)
+    end
+end
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Unreal V1.1", "DarkTheme")
+local Main = Window:NewTab("Stuff")
+local MainSection = Main:NewSection("Auto Farm")
+MainSection:NewToggle("Start John Farm", "BOMBER IS NEEDED", function(state)
+    if state then
+        debounce = true
+        Activation()
+    else
+        debounce = false
+    end
 end)
-game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
-game.ReplicatedStorage.ToggleAbility:InvokeServer(true)
-repeat
-    John()
-    wait(0.0001)
-until debounce == false
+MainSection:NewToggle("Kill all mobs (SUPER LAGGY)", "BOMBER IS NEEDED", function(state)
+    if state then
+        debounce1 = true
+        KillAllActivation()
+    else
+        debounce1 = false
+    end
+end)
