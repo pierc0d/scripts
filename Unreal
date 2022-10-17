@@ -1,5 +1,5 @@
 function Arlo()
-    if workspace.Arlo and workspace.Arlo.Parent == workspace then
+    if workspace.Arlo and workspace.Arlo.Humanoid.Health >= 1 and workspace.Arlo.Parent == workspace then
         print("ArloTime")
        local Arlo = workspace.Arlo.Humanoid
         repeat
@@ -20,7 +20,8 @@ function Arlo()
     end
 end
 function John()
-    if workspace.John then
+    if workspace.John and workspace.John.Humanoid.Health >= 1 and workspace.John.Parent == workspace then
+        print("JohnTime")
         local John = workspace.John.Humanoid
         repeat
             game.ReplicatedStorage.Damage:FireServer("Detonate",John,18,{})
