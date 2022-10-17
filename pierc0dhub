@@ -82,7 +82,7 @@ function Activation()
     end
 end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Pierc0d's Hub V1", "DarkTheme")
+local Window = Library.CreateLib("Pierc0d's Hub V1.01", "DarkTheme")
 local UnReal = Window:NewTab("UnReal")
 local UnRealSection = UnReal:NewSection("Functions")
 UnRealSection:NewToggle("John and Arlo Farm", "BOMBER IS NEEDED", function(state)
