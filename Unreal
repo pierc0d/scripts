@@ -22,64 +22,6 @@ function KillGodTiers()
         end
     end
 end
-function KillAll()
-    for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "John" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
-            end
-        end
-    end
-    for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Arlo" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
-            end
-        end
-    end
-    for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Barrier" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
-            end
-        end
-    end
-    for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Isen" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
-            end
-        end
-    end
-    for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Remi" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = ggame.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
-            end
-        end
-    end
-    for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Blyke" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
-            end
-        end
-    end
-    for i, v in pairs(game.Workspace:GetChildren()) do
-        if v:IsA("Model") and v.Name == "Zeke" then
-            if v:FindFirstChild("Humanoid") then
-            game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
-            game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position,["Charge"] = 1},0)
-            end
-        end
-    end
-end
 function Activation()
     while debounce == true do
         game.ReplicatedStorage.TakeQuest:FireServer("Completed")
@@ -87,13 +29,7 @@ function Activation()
         wait(0.0001)
     end
 end
-function KillAllActivation()
-    while debounce1 == true do
-        game.ReplicatedStorage.TakeQuest:FireServer("Completed")
-        KillAllActivation()
-        wait(0.05)
-    end
-end
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Unreal V1.1", "DarkTheme")
 local Main = Window:NewTab("Stuff")
@@ -104,13 +40,5 @@ MainSection:NewToggle("Start John Farm", "BOMBER IS NEEDED", function(state)
         Activation()
     else
         debounce = false
-    end
-end)
-MainSection:NewToggle("Kill all mobs (SUPER LAGGY)", "BOMBER IS NEEDED", function(state)
-    if state then
-        debounce1 = true
-        KillAllActivation()
-    else
-        debounce1 = false
     end
 end)
