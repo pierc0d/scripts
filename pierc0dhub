@@ -161,7 +161,7 @@ end
 function ActivationUnFair()
     while UnFairDebounce == true do
         KillMobsUnFair()
-        wait(0.01)
+        wait(0.1)
     end
 end
 function ActivationJohn()
