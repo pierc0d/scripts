@@ -1,3 +1,90 @@
+MiniLVL = 6
+function Spin()
+    --// Settings \\--
+    getgenv().Slot = 2 -- Slot To Store Ability
+    getgenv().MinLevel = MiniLVL -- Minimum Level To Keep An Ability
+    getgenv().Whitelisted_Abilities = {
+        ""
+    } -- Abilities to keep regardless of potential
+    getgenv().AutoSpin = not getgenv().AutoSpin -- This will enable and disable the script on each execution, no need to edit just re-execute to disable
+    if not getgenv().RanScript then
+        --// Backup Settings \\--
+        if not getgenv().Slot and not getgenv().MinLevel and not getgenv().Whitelisted_Abilities then
+            getgenv().Slot = 2 -- Slot To Store Ability
+            getgenv().MinLevel = 2 -- Minimum Level To Keep An Ability
+            getgenv().Whitelisted_Abilities = {
+            } -- Abilities to keep regardless of potential
+        end
+    
+        getgenv().Normal_Delay = 0 -- Delay For Abilities Less Than 5.0 
+        getgenv().High_Delay = 0.1 -- Delay For Abilities Higher Than 5.0 this does nothing atm lolll
+    
+        --// DON'T EDIT ANYTHING UNDER HERE UNLESS YOU KNOW WHAT YOU'RE DOING LOL \\--
+    
+        local s = game:GetService("Players").LocalPlayer.PlayerGui.Reroll.Reroll
+        if not getgenv().Ability_Function then
+            getgenv().Ability_Function = nil
+        end
+        
+        local old;
+    
+        for i,v in pairs(getgc(true)) do
+            if type(v) == "function" and getfenv(v).script == s and getinfo(v).name == "OnClientInvoke" and tostring(getconstants(v)[1]) ~= "bosstp" then
+                if not getgenv().Ability_Function then
+                    getgenv().Ability_Function = v
+                end
+            end
+        end
+    
+        getgenv().Reroll_Function = function(a,b)
+            getgenv().Slot2 = nil
+    
+            print(a,b)
+            task.wait(getgenv().Normal_Delay)
+            if table.find(getgenv().Whitelisted_Abilities, a) then
+                getgenv().woo = messagebox("Would You Like To Store "..a.."( "..b.." )?", "Got A Whitelisted Ability!", 4)
+                if getgenv().woo == 6 then
+                    getgenv().Slot2 = getgenv().Slot
+                elseif getgenv().woo == 4 then
+                    getgenv().Slot2 = false
+                else
+                    getgenv().Slot2 = false
+                end
+            end
+            if b >= MinLevel then
+                getgenv().woo = messagebox("Would You Like To Store "..a.."( "..b.." )?", "Ability Above Selected Potential", 4)
+                if getgenv().woo == 6 then
+                    getgenv().Slot2 = getgenv().Slot
+                elseif getgenv().woo == 4 then
+                    getgenv().Slot2 = false
+                else
+                    getgenv().Slot2 = false
+                end
+            end
+            if getgenv().Slot2 == nil then
+                getgenv().Slot2 = false
+            end
+    
+            return false, getgenv().Slot2
+        end
+    
+        old = hookfunction(getgenv().Ability_Function, function(a,b) 
+            return getgenv().Reroll_Function(a, b)
+        end)
+    
+        task.spawn(function()
+            while true do
+                if getgenv().AutoSpin then
+                    task.spawn(function()
+                        game.ReplicatedStorage.Reroll:InvokeServer()
+                    end)
+                end
+                task.wait()
+            end
+        end)
+        getgenv().RanScript = true
+    end
+end
 function KillMobs()
     for i, v in pairs(game.Workspace:GetChildren()) do
         if v:IsA("Model") and v.Name == "Cripple" then
@@ -73,19 +160,69 @@ function KillMobs()
     end
 end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Pierc0d's UnFair Script", "BloodTheme")
+local Window = Library.CreateLib("Pierc0d's UnFair Script : https://discord.gg/ty4z3354gc", "BloodTheme")
 local UnFair = Window:NewTab("UnFair")
+local Credits = Window:NewTab("Credits")
 local FunctionsSection = UnFair:NewSection("Functions")
+local CreditsSection = Credits:NewSection("Credits")
 FunctionsSection:NewToggle("Kill Aura (Arbiter)", "Kills anyone around you.", function(state)
     debounce = false 
     if state then
         debounce = true
         while debounce == true do
             KillMobs()
-            wait(0.01)
+            wait(0.05)
         end
     else
         debounce = false
     end
 end)
-local MiscSection = UnFair:NewSection("Misc")
+FunctionsSection:NewToggle("Auto Quest 4", "Completes and gives you the Quest when ready.", function(state)
+    debounce = false 
+    if state then
+        debounce = true
+        game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
+        while debounce == true do
+            if game.Players.LocalPlayer.PlayerGui.MainClient.Quest.Folder.Objective.progress.Text == "15/15" then
+                game.ReplicatedStorage.TakeQuest:FireServer("Completed")
+                wait(.1)
+                game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
+            end
+            wait(.25)
+        end
+    else
+        debounce = false
+    end
+end)
+local Spinning = UnFair:NewSection("Spinning (Randomly Stores)")
+Spinning:NewToggle("Spin Ability (Press again to toggle off)", "Spins your Ability pretty quickly", function(state)
+    debounce = false 
+    if state then
+        Spin()
+    else
+        Spin()
+    end
+end)
+Spinning:NewDropdown("Ability Minimum Level", "", {"10","12","13","14","14.5"}, function(currentOption)
+    if currentOption == "10" then
+        MiniLVL = 10
+    end
+    if currentOption == "12" then
+        MiniLVL = 12
+    end
+    if currentOption == "13" then
+        MiniLVL = 13
+    end
+    if currentOption == "14" then
+        MiniLVL = 14
+    end
+    if currentOption == "14.5" then
+        MiniLVL = 14.5
+    end
+end)
+CreditsSection:NewTextBox("Made by: Pierc0d", "", function(txt)
+	print(txt)
+end)
+CreditsSection:NewKeybind("P to Toggle", "", Enum.KeyCode.P, function()
+	Library:ToggleUI()
+end)
