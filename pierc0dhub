@@ -236,7 +236,7 @@ UniversalSection:NewDropdown("Ability Store", "What ability it will store into",
         SlotNum = 3
     end
 end)
-UniversalSection:NewDropdown("Minimum Level", "What level it will take", {"3.5", "5", "6","10"}, function(currentOption)
+UniversalSection:NewDropdown("Minimum Level", "What level it will take", {"3.5", "5", "6","10","12","13.5"}, function(currentOption)
     if currentOption == "3.5" then
         MinLevelNum = 3.5
     end
@@ -248,5 +248,11 @@ UniversalSection:NewDropdown("Minimum Level", "What level it will take", {"3.5",
     end
     if currentOption == "10" then
         MinLevelNum = 10
+    end
+    if currentOption == "12" then
+        MinLevelNum = 12
+    end
+    if currentOption == "13.5" then
+        MinLevelNum = 13.5
     end
 end)
