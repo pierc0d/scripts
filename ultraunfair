@@ -1,0 +1,91 @@
+function KillMobs()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Cripple" then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Isen" then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Blyke" then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Arlo" then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Barrier" then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "John" then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Seraphina" then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Remi" then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Zeke" then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+end
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Pierc0d's UnFair Script", "BloodTheme")
+local UnFair = Window:NewTab("UnFair")
+local FunctionsSection = UnFair:NewSection("Functions")
+FunctionsSection:NewToggle("Kill Aura (Arbiter)", "Kills anyone around you.", function(state)
+    debounce = false 
+    if state then
+        debounce = true
+        while debounce == true do
+            KillMobs()
+            wait(0.01)
+        end
+    else
+        debounce = false
+    end
+end)
+local MiscSection = UnFair:NewSection("Misc")
