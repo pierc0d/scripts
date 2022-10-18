@@ -1,9 +1,96 @@
+SlotNum = 1 
+MinLevelNum = 1
 JohnDebounce = false
 ArloDebounce = false
 AutoQuestDebounce = false
 local Noclip = nil
 local Clip = nil
-
+function Spin()
+    --// Settings \\--
+    getgenv().Slot = SlotNum -- Slot To Store Ability
+    getgenv().MinLevel = MinLevelNum -- Minimum Level To Keep An Ability
+    getgenv().Whitelisted_Abilities = {
+        ""
+    } -- Abilities to keep regardless of potential
+    getgenv().AutoSpin = not getgenv().AutoSpin -- This will enable and disable the script on each execution, no need to edit just re-execute to disable
+    if not getgenv().RanScript then
+        --// Backup Settings \\--
+        if not getgenv().Slot and not getgenv().MinLevel and not getgenv().Whitelisted_Abilities then
+            getgenv().Slot = 2 -- Slot To Store Ability
+            getgenv().MinLevel = 2 -- Minimum Level To Keep An Ability
+            getgenv().Whitelisted_Abilities = {
+            } -- Abilities to keep regardless of potential
+        end
+    
+        getgenv().Normal_Delay = 0 -- Delay For Abilities Less Than 5.0 
+        getgenv().High_Delay = 0.1 -- Delay For Abilities Higher Than 5.0 this does nothing atm lolll
+    
+        --// DON'T EDIT ANYTHING UNDER HERE UNLESS YOU KNOW WHAT YOU'RE DOING LOL \\--
+    
+        local s = game:GetService("Players").LocalPlayer.PlayerGui.Reroll.Reroll
+        if not getgenv().Ability_Function then
+            getgenv().Ability_Function = nil
+        end
+        
+        local old;
+    
+        for i,v in pairs(getgc(true)) do
+            if type(v) == "function" and getfenv(v).script == s and getinfo(v).name == "OnClientInvoke" and tostring(getconstants(v)[1]) ~= "bosstp" then
+                if not getgenv().Ability_Function then
+                    getgenv().Ability_Function = v
+                end
+            end
+        end
+    
+        getgenv().Reroll_Function = function(a,b)
+            getgenv().Slot2 = nil
+    
+            print(a,b)
+            task.wait(getgenv().Normal_Delay)
+            if table.find(getgenv().Whitelisted_Abilities, a) then
+                getgenv().woo = messagebox("Would You Like To Store "..a.."( "..b.." )?", "Got A Whitelisted Ability!", 4)
+                if getgenv().woo == 6 then
+                    getgenv().Slot2 = getgenv().Slot
+                elseif getgenv().woo == 4 then
+                    getgenv().Slot2 = false
+                else
+                    getgenv().Slot2 = false
+                end
+            end
+            if b >= MinLevel then
+                getgenv().woo = messagebox("Would You Like To Store "..a.."( "..b.." )?", "Ability Above Selected Potential", 4)
+                if getgenv().woo == 6 then
+                    getgenv().Slot2 = getgenv().Slot
+                elseif getgenv().woo == 4 then
+                    getgenv().Slot2 = false
+                else
+                    getgenv().Slot2 = false
+                end
+            end
+            if getgenv().Slot2 == nil then
+                getgenv().Slot2 = false
+            end
+    
+            return false, getgenv().Slot2
+        end
+    
+        old = hookfunction(getgenv().Ability_Function, function(a,b) 
+            return getgenv().Reroll_Function(a, b)
+        end)
+    
+        task.spawn(function()
+            while true do
+                if getgenv().AutoSpin then
+                    task.spawn(function()
+                        game.ReplicatedStorage.Reroll:InvokeServer()
+                    end)
+                end
+                task.wait()
+            end
+        end)
+        getgenv().RanScript = true
+    end
+end
 function noclip()
 	Clip = false
 	local function Nocl()
@@ -71,7 +158,7 @@ function ActivationArlo()
     end
 end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Pierc0d's Hub V1.02", "DarkTheme")
+local Window = Library.CreateLib("Pierc0d's Hub V1.03", "DarkTheme")
 local UnReal = Window:NewTab("UnReal")
 local UnRealSection = UnReal:NewSection("Functions")
 UnRealSection:NewToggle("John Farm", "BOMBER IS NEEDED", function(state)
@@ -107,5 +194,30 @@ UniversalSection:NewToggle("Noclip", "Enables and Disables Noclip", function(sta
         noclip()
     else
         clip()
+    end
+end)
+UniversalSection:NewButton("Auto Spin (Click again to stop)", "It spins for you", function()
+    Spin()
+end)
+UniversalSection:NewDropdown("Ability Store", "What ability it will store into", {"1", "2", "3"}, function(currentOption)
+    if currentOption == "1" then
+        SlotNum = 1
+    end
+    if currentOption == "2" then
+        SlotNum = 2
+    end
+    if currentOption == "3" then
+        SlotNum = 3
+    end
+end)
+UniversalSection:NewDropdown("Minimum Level", "What level it will take", {"3.5", "5", "6"}, function(currentOption)
+    if currentOption == "3.5" then
+        MinLevelNum = 3.5
+    end
+    if currentOption == "5" then
+        MinLevelNum = 5
+    end
+    if currentOption == "6" then
+        MinLevelNum = 6
     end
 end)
