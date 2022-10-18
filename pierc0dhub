@@ -122,8 +122,9 @@ function KillMobsUnFair()
 end
 function John()
     for i, v in pairs(game.Workspace:GetChildren()) do
+        local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
         if v:IsA("Model") and v.Name == "John" then
-            if v:FindFirstChild("Humanoid") then
+            if v:FindFirstChild("Humanoid") and dist <= 75 then
                 game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
                 game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
             end
@@ -133,13 +134,15 @@ end
 function Arlo()
     for i, v in pairs(game.Workspace:GetChildren()) do
         if v:IsA("Model") and v.Name == "Barrier" then
-            if v:FindFirstChild("Humanoid") then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 75 then
                 game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
                 game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
             end
         end
         if v:IsA("Model") and v.Name == "Arlo" then
-            if v:FindFirstChild("Humanoid") then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 75 then
                 game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
                 game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
             end
@@ -164,14 +167,12 @@ end
 function ActivationJohn()
     while JohnDebounce == true do
         John()
-        game.ReplicatedStorage.TakeQuest:FireServer("Completed")
         wait(0.1)
     end
 end
 function ActivationArlo()
     while ArloDebounce == true do
         Arlo()
-        game.ReplicatedStorage.TakeQuest:FireServer("Completed")
         wait(0.1)
     end
 end
