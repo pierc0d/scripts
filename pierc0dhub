@@ -165,14 +165,14 @@ function ActivationJohn()
     while JohnDebounce == true do
         John()
         game.ReplicatedStorage.TakeQuest:FireServer("Completed")
-        wait(0.01)
+        wait(0.1)
     end
 end
 function ActivationArlo()
     while ArloDebounce == true do
         Arlo()
         game.ReplicatedStorage.TakeQuest:FireServer("Completed")
-        wait(0.01)
+        wait(0.1)
     end
 end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
