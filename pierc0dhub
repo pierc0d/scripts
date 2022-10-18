@@ -2,6 +2,7 @@ SlotNum = 1
 MinLevelNum = 1
 JohnDebounce = false
 ArloDebounce = false
+UnFairDebounce = false
 AutoQuestDebounce = false
 local Noclip = nil
 local Clip = nil
@@ -105,12 +106,20 @@ function noclip()
 	end
 	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
 end
-
 function clip()
 	if Noclip then Noclip:Disconnect() end
 	Clip = true
 end
-
+function KillMobsUnFair()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v:FindFirstChild("Humanoid") and v.Name ~= game.Players.LocalPlayer.Character.Name then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+end
 function John()
     for i, v in pairs(game.Workspace:GetChildren()) do
         if v:IsA("Model") and v.Name == "John" then
@@ -139,8 +148,17 @@ function Arlo()
 end
 function AutoQuest()
     while AutoQuestDebounce == true do
-    game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
-    wait(20)
+        if game.Players.LocalPlayer.PlayerGui.MainClient.Quest.Folder.Objective.progress.Text == "15/15" then
+            game.ReplicatedStorage.TakeQuest:FireServer("Completed")
+            game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
+        end
+        wait(1)
+    end
+end
+function ActivationUnFair()
+    while UnFairDebounce == true do
+        KillMobsUnFair()
+        wait(0.01)
     end
 end
 function ActivationJohn()
@@ -158,7 +176,7 @@ function ActivationArlo()
     end
 end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Pierc0d's Hub V1.1", "DarkTheme")
+local Window = Library.CreateLib("Pierc0d's Hub V1.11", "DarkTheme")
 local UnReal = Window:NewTab("UnReal")
 local UnRealSection = UnReal:NewSection("Functions")
 UnRealSection:NewToggle("John Farm", "BOMBER IS NEEDED", function(state)
@@ -177,7 +195,19 @@ UnRealSection:NewToggle("Arlo Farm", "BOMBER IS NEEDED", function(state)
         ArloDebounce = false
     end
 end)
-UnRealSection:NewToggle("Auto Quest", "Auto Quest4", function(state)
+local UnFair = Window:NewTab("UnFair")
+local UnFairSection = UnFair:NewSection("Functions")
+UnFairSection:NewToggle("Kill Aura", "YOU NEED ARBITER", function(state)
+    if state then
+        UnFairDebounce = true
+        ActivationUnFair()
+    else
+        UnFairDebounce = false
+    end
+end)
+local Universal = Window:NewTab("Universal")
+local UniversalSection = Universal:NewSection("Functions")
+UniversalSection:NewToggle("Auto Quest", "Auto Quest4", function(state)
     if state then
         AutoQuestDebounce = true
         AutoQuest()
@@ -185,10 +215,6 @@ UnRealSection:NewToggle("Auto Quest", "Auto Quest4", function(state)
         AutoQuestDebounce = false
     end
 end)
-local UnFair = Window:NewTab("UnFair")
-local UnFairSection = UnFair:NewSection("WIP")
-local Universal = Window:NewTab("Universal")
-local UniversalSection = Universal:NewSection("Functions")
 UniversalSection:NewToggle("Noclip", "Enables and Disables Noclip", function(state)
     if state then
         noclip()
@@ -210,7 +236,7 @@ UniversalSection:NewDropdown("Ability Store", "What ability it will store into",
         SlotNum = 3
     end
 end)
-UniversalSection:NewDropdown("Minimum Level", "What level it will take", {"3.5", "5", "6"}, function(currentOption)
+UniversalSection:NewDropdown("Minimum Level", "What level it will take", {"3.5", "5", "6","10"}, function(currentOption)
     if currentOption == "3.5" then
         MinLevelNum = 3.5
     end
@@ -219,5 +245,8 @@ UniversalSection:NewDropdown("Minimum Level", "What level it will take", {"3.5",
     end
     if currentOption == "6" then
         MinLevelNum = 6
+    end
+    if currentOption == "10" then
+        MinLevelNum = 10
     end
 end)
