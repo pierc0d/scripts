@@ -1,0 +1,322 @@
+SlotNum = 1 
+MinLevelNum = 1
+JohnDebounce = false
+BossDebounce = false
+ArloDebounce = false
+UnFairDebounce = false
+AutoQuestDebounce = false
+local Noclip = nil
+local Clip = nil
+Debounce = true
+function KillAll()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v:FindFirstChild("Humanoid") and v.Name ~= game.Players.LocalPlayer.Character.Name then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+    end
+end
+function Activation()
+    while Debounce == true do
+        KillAll()
+        wait(0.1)
+    end
+end
+function Spin()
+    --// Settings \\--
+    getgenv().Slot = SlotNum -- Slot To Store Ability
+    getgenv().MinLevel = MinLevelNum -- Minimum Level To Keep An Ability
+    getgenv().Whitelisted_Abilities = {
+        ""
+    } -- Abilities to keep regardless of potential
+    getgenv().AutoSpin = not getgenv().AutoSpin -- This will enable and disable the script on each execution, no need to edit just re-execute to disable
+    if not getgenv().RanScript then
+        --// Backup Settings \\--
+        if not getgenv().Slot and not getgenv().MinLevel and not getgenv().Whitelisted_Abilities then
+            getgenv().Slot = 2 -- Slot To Store Ability
+            getgenv().MinLevel = 2 -- Minimum Level To Keep An Ability
+            getgenv().Whitelisted_Abilities = {
+            } -- Abilities to keep regardless of potential
+        end
+    
+        getgenv().Normal_Delay = 0 -- Delay For Abilities Less Than 5.0 
+        getgenv().High_Delay = 0.1 -- Delay For Abilities Higher Than 5.0 this does nothing atm lolll
+    
+        --// DON'T EDIT ANYTHING UNDER HERE UNLESS YOU KNOW WHAT YOU'RE DOING LOL \\--
+    
+        local s = game:GetService("Players").LocalPlayer.PlayerGui.Reroll.Reroll
+        if not getgenv().Ability_Function then
+            getgenv().Ability_Function = nil
+        end
+        
+        local old;
+    
+        for i,v in pairs(getgc(true)) do
+            if type(v) == "function" and getfenv(v).script == s and getinfo(v).name == "OnClientInvoke" and tostring(getconstants(v)[1]) ~= "bosstp" then
+                if not getgenv().Ability_Function then
+                    getgenv().Ability_Function = v
+                end
+            end
+        end
+    
+        getgenv().Reroll_Function = function(a,b)
+            getgenv().Slot2 = nil
+    
+            print(a,b)
+            task.wait(getgenv().Normal_Delay)
+            if table.find(getgenv().Whitelisted_Abilities, a) then
+                getgenv().woo = messagebox("Would You Like To Store "..a.."( "..b.." )?", "Got A Whitelisted Ability!", 4)
+                if getgenv().woo == 6 then
+                    getgenv().Slot2 = getgenv().Slot
+                elseif getgenv().woo == 4 then
+                    getgenv().Slot2 = false
+                else
+                    getgenv().Slot2 = false
+                end
+            end
+            if b >= MinLevel then
+                getgenv().woo = messagebox("Would You Like To Store "..a.."( "..b.." )?", "Ability Above Selected Potential", 4)
+                if getgenv().woo == 6 then
+                    getgenv().Slot2 = getgenv().Slot
+                elseif getgenv().woo == 4 then
+                    getgenv().Slot2 = false
+                else
+                    getgenv().Slot2 = false
+                end
+            end
+            if getgenv().Slot2 == nil then
+                getgenv().Slot2 = false
+            end
+    
+            return false, getgenv().Slot2
+        end
+    
+        old = hookfunction(getgenv().Ability_Function, function(a,b) 
+            return getgenv().Reroll_Function(a, b)
+        end)
+    
+        task.spawn(function()
+            while true do
+                if getgenv().AutoSpin then
+                    task.spawn(function()
+                        game.ReplicatedStorage.Reroll:InvokeServer()
+                    end)
+                end
+                task.wait()
+            end
+        end)
+        getgenv().RanScript = true
+    end
+end
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+function KillMobsUnFair()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v:FindFirstChild("Humanoid") and v.Name ~= game.Players.LocalPlayer.Character.Name then
+            local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+            if v:FindFirstChild("Humanoid") and dist <= 100 then
+                game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+            end
+        end
+    end
+end
+function John()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "John" then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+    end
+end
+function Arlo()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Barrier" then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+        if v:IsA("Model") and v.Name == "Arlo" then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+    end
+end
+function Boss()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == "Barrier" then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+        if v:IsA("Model") and v.Name == "Arlo" then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+        if v:IsA("Model") and v.Name == "John" then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+        if v:IsA("Model") and v.Name == "Seraphina" then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+        if v:IsA("Model") and v.Name == "Isen" then
+            if v:FindFirstChild("Humanoid") then
+                game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),18,{})
+                game.ReplicatedStorage.Cast:FireServer("Detonate",{["Mousepos"] = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Position"),["Charge"] = 1},0)
+            end
+        end
+    end
+end
+function AutoQuest()
+    while AutoQuestDebounce == true do
+        if game.Players.LocalPlayer.PlayerGui.MainClient.Quest.Folder.Objective.progress.Text == "15/15" then
+            game.ReplicatedStorage.TakeQuest:FireServer("Completed")
+            game.ReplicatedStorage.TakeQuest:FireServer("Rigged Game")
+        end
+        wait(1)
+    end
+end
+function ActivationUnFair()
+    while UnFairDebounce == true do
+        KillMobsUnFair()
+        wait(0.01)
+    end
+end
+function ActivationJohn()
+    while JohnDebounce == true do
+        John()
+        wait(0.01)
+    end
+end
+function ActivationBoss()
+    while BossDebounce == true do
+        Boss()
+        wait(0.01)
+    end
+end
+function ActivationArlo()
+    while ArloDebounce == true do
+        Arlo()
+        wait(0.01)
+    end
+end
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Pierc0d's Private Hub", "DarkTheme")
+local UnReal = Window:NewTab("UnReal")
+local UnRealSection = UnReal:NewSection("Functions")
+UnRealSection:NewToggle("Boss Farm", "BOMBER IS NEEDED", function(state)
+    if state then
+        BossDebounce = true
+        ActivationBoss()
+    else
+        BossDebounce = false
+    end
+end)
+UnRealSection:NewToggle("John Farm", "BOMBER IS NEEDED", function(state)
+    if state then
+        JohnDebounce = true
+        ActivationJohn()
+    else
+        JohnDebounce = false
+    end
+end)
+UnRealSection:NewToggle("Arlo Farm", "BOMBER IS NEEDED", function(state)
+    if state then
+        ArloDebounce = true
+        ActivationArlo()
+    else
+        ArloDebounce = false
+    end
+end)
+local Universal = Window:NewTab("Universal")
+local UniversalSection = Universal:NewSection("Functions")
+UniversalSection:NewToggle("Auto Quest", "Auto Quest4", function(state)
+    if state then
+        AutoQuestDebounce = true
+        AutoQuest()
+    else
+        AutoQuestDebounce = false
+    end
+end)
+UniversalSection:NewToggle("Noclip", "Enables and Disables Noclip", function(state)
+    if state then
+        noclip()
+    else
+        clip()
+    end
+end)
+UniversalSection:NewButton("Auto Spin (Click again to stop)", "It spins for you", function()
+    Spin()
+end)
+UniversalSection:NewDropdown("Ability Store", "What ability it will store into", {"1", "2", "3"}, function(currentOption)
+    if currentOption == "1" then
+        SlotNum = 1
+    end
+    if currentOption == "2" then
+        SlotNum = 2
+    end
+    if currentOption == "3" then
+        SlotNum = 3
+    end
+end)
+UniversalSection:NewDropdown("Minimum Level", "What level it will take", {"3.5", "5", "6","10","12","13.5"}, function(currentOption)
+    if currentOption == "3.5" then
+        MinLevelNum = 3.5
+    end
+    if currentOption == "5" then
+        MinLevelNum = 5
+    end
+    if currentOption == "6" then
+        MinLevelNum = 6
+    end
+    if currentOption == "10" then
+        MinLevelNum = 10
+    end
+    if currentOption == "12" then
+        MinLevelNum = 12
+    end
+    if currentOption == "13.5" then
+        MinLevelNum = 13.5
+    end
+end)
+local funny = Window:NewTab("Admin")
+local funnysec = funny:NewSection("Admin Commands")
+funnysec:NewToggle("NUKE", "BOMBER IS NEEDED", function(state)
+    if state then
+        Debounce = true
+        Activation()
+    else
+        Debounce = false
+    end
+end)
