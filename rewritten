@@ -1,1 +1,811 @@
-return(function(...)local k={"lMc/kK8OqXIYkd==","qOmjS9wDmOjegOZ9PXH=","7f==";"H0cYH0tO";"qXm3lDkI","koUdqAj3Hmq0";"gKuOqeTITJ==";"HmI09A8MV9wxkXZWqtS=","7ETS7ax9nE/99M8H","TEwdHE8p";"yr2njGwQakWu93ErpLxKhtoIOZI9TBPx8+/hJK2xUaOQ1iMBWZOe71in7NOrOr0GkS5KYb791bf=","H0//qf==","kaRWlDU=","hyxLlO6DTOwj9oq0";"So8aqhmmkyxthBJ2PJ==","TMcYTE2+kaU=","kXZzlDU=";"qM8/lMd=";"lOU=","lye=";"k0t3kV==";"7+fIkC6j7f==";"TMt+lM9=","lyU=","a2cjlXuIPJ==","HAIOkV==";"TMcBTKRjlXq=","qI6OEamBTak1Vhu+kd==";"qDuWnEwA";"mMt3qMmWUeuITMmoTMm5UV==";"q5c0gy8Zny/ulOuW";"a2c3kau/TMt+lM9=";"a2cAHd==";"","9muG7hV=","k02/TM86";"HamGqBxdn0rO8AuD";"a2c1kEs=";"ltUD8IVwTE2hktxLSV==";"lMmY","lEtOnJ==";"qBtBhXIHg0RHu0fW","q0mOlEmOHau/HXZI","qXtYkMc3";"PekzkyIKme2XlK8b","hyubk2IYSIU=";"kD82Hf=="}for E,H in ipairs({{793204+-793203;-863067-(-863114)},{-270827+270828,279686-279651},{902754+-902718,141452+(856921-998326)}})do while H[-480311+480312]<H[(-820333+-68467)+888802]do k[H[(373047+-520957)+(1047865-(-81402+981356))]],k[H[(((1292759-395390)-(-117259))+-1524527)-(-509901)]],H[761435-761434],H[507720+-507718]=k[H[-919920+919922]],k[H[678876-678875]],H[101181-101180]+((1195531-894169)-301361),H[1026817-1026815]-(((875176-118579)-1018691)+((1028219+-1042534)+(87723-(-188687))))end end local function E(E)return k[E+(-679050+717396)]end do local E=k local H=table.concat local F=table.insert local A=string.sub local x=string.len local a=type local J=math.floor local w={K=((281744+(1496895-(1069093-(-669717+864383))))-518391)-385814;O=405208+-405156;g=318006+-317988;f=1000522+-1000490;Q=377022+-376991;["3"]=-746236+746281,A=-546426-(141097+-687562),k=-124925+124950;T=698166+-698137;q=109360+-109332;o=-403390+403425;C=(-1013781-(-857073))+(-570375-(-727085));X=-533485+533523;["9"]=-1015131+1015151,["4"]=(-301037-393240)-(-694335);r=((879207-(-24140))+-278976)+-624311,["/"]=860936-860903,t=-2361+(565018-562652);b=(571732+-370433)+-201257,R=262898-262889,N=695737+-695722,["7"]=-963612-(-963626),u=67219+-67202;w=-1000627+1000684;["5"]=952287+(-1911232-(-1402840-(-443859)));e=-791730-(709413+-1501147),H=659973-659949,a=-801002+801025,["8"]=107808-107795,F=(-550531+937403)-386809,V=(241205-1002198)+(329873-(102556-533692)),Z=355024+-354975;p=-185041-(-185084),c=-575563-(-575624),j=-314924-(-314965),v=214597+-214535;d=-481079+481127,J=-316247-(-316247);D=595810+-595755;G=-170726-(-170737),h=(359832-811712)-(-451899);B=(67147+218698)-285794,i=144170+(143421+-287532);I=-344808+344845;x=731931-731930,n=975108+(884203+-1859285),["0"]=-863951-(-864005),P=(273927+253208)-527105;M=-928972-(-928978);l=625566-(996982+-371443),["6"]=132333-132293,S=-107506+107518;["+"]=37795+-37761;y=260610+-260607,z=525242-525195;U=(142550-(-1101950-(-882256)))+-362236,m=207391-207370;["1"]=-1008380-(-1008424);["2"]=-205310+205363,Y=-450979+451025,L=759949+-759939;s=-115222+115278;W=-495521+495571,E=-272131-(-272153)}local i=string.char for k=-293731-(-293732),#E,-472553+472554 do local p=E[k]if a(p)=="string"then local a=x(p)local N={}local z=(523064+-347816)+-175247 local u=-682028-(-1410908-(-728880))local W=619948-619948 while z<=a do local k=A(p,z,z)local E=w[k]if E then u=u+E*(-961408-(((1210816-(1268953-248165))+-369174)+-782326))^((((-768634+870715)-(-326692))-428770)-W)W=W+(985954+-985953)if W==295866+-295862 then W=(-619875+-368812)-((-163695-(-628964))+-1453956)local k=J(u/((-709991+(-598508+1694184))+-320149))local E=J((u%(781470+-715934))/(1008597-1008341))local H=u%(446577-446321)F(N,i(k,E,H))u=-111268-(-111268)end elseif k=="="then F(N,i(J(u/((855565+-1254804)-(-464775)))))if z>=a or A(p,z+(-70577+70578),z+((-532421+1486063)-953641))~="="then F(N,i(J((u%(467625-402089))/(((-168204-(-719947))+137196)+-688683))))end break end z=z+(-201971-(-201972))end E[k]=H(N)end end end return(function(k,F,A,x,a,J,w,S,r,H,Z,N,z,L,c,W,y,u,p,i)S,p,u,W,Z,L,N,c,y,z,i,r,H=function(k)p[k]=p[k]-(41285-41284)if p[k]==167356+-167356 then p[k],i[k]=nil,nil end end,{},function(k)for E=(80277+131914)+-212190,#k,(798341-1020884)-(-222544)do p[k[E]]=(260266-260265)+p[k[E]]end if A then local H=A(true)local F=a(H)F[E((-646273-(-113604))+(854291+(-259498-(((-312629+((-475018+-65353)+1522800))-(435537+100274))+-33532))))],F[E(((-189537-(-184675))+(-803098+25374))-(-744261))],F[E(-862308-(-823988))]=k,W,function()return 155506+-4058579 end return H else return x({},{[E(-183758-(-145433))]=W;[E((-650427-(-499687))+112407)]=k,[E(-114049-(-75729))]=function()return 65689+(-4450952-(-441521+-40669))end})end end,function(k)local E,H=469151-469150,k[287736-287735]while H do p[H],E=p[H]-(569091-569090),E+(-129265+129266)if p[H]==141319-141319 then p[H],i[H]=nil,nil end H=k[E]end end,function(k,E)local F=u(E)local A=function(...)return H(k,{...},E,F)end return A end,function(k,E)local F=u(E)local A=function(A,x,a,J,w)return H(k,{A;x,a,J;w},E,F)end return A end,function()z=z+(-198785+198786)p[z]=926193-926192 return z end,function(k,E)local F=u(E)local A=function(A,x,a,J,w,i)return H(k,{A,x;a,J,w,i},E,F)end return A end,function(k,E)local F=u(E)local A=function(A)return H(k,{A},E,F)end return A end,-978623-(-978623),{},function(k,E)local F=u(E)local A=function(A,x,a)return H(k,{A;x,a},E,F)end return A end,function(H,A,x,a)local U,K,o,Y,I,u,l,t,D,R,Z,P,Q,m,G,s,n,C,M,q,w,d,j,X,v,B,z,W,e,g,V,h,p,O while H do if H<7804496-779667 then if H<709707+2541936 then if H<1941100-(-273921)then if H<1766934-757068 then if H<-86483-(-676465)then if H<1082805-811642 then if H<(-483191-(649533-741709))-(-636671)then z=E(385275-(776937+-353350))w=405646+1991843 u=160577+(118200+10228332)p=z^u H=w-p w=E(425682+-463987)p=H H=w/p w={H}H=k[E(((-323266+(1030468-(-1022742)))-871131)+-897126)]else H=true H=-66891+15901085 end else R=E(510237-548538)H=(868780-(-123922))+14298650 d=k[R]w=d end else if H<-934354+1864200 then z=i[x[-12189-(-12192)]]u=226568-(-320042-((321246-(-13355))+-881036))p=z*u z=(104888+-835197)+730566 H=6481955-(-370017)w=p%z i[x[989957+-989954]]=w else m=j==G g=m H=14169167-546828 end end else if H<2190927-71241 then if H<-147418+(2297294-87524)then Q=E(481111-519445)H=k[Q]Q=E(630815+-669153)k[Q]=H H=((620681+-1013595)+4279524)-(-263211-544077)else D=#O Q=(1019957+-2041043)+1021086 I=D==Q H=I and-256835+11659413 or 612021+2669170 end else if H<94102+2107435 then Z=S(Z)V=nil G=nil j=nil G=N()O=nil z=S(z)V=E(725568-763885)W=S(W)d=S(d)X=nil u=S(u)d=E((-1015994+1189668)-212003)Z=k[V]z=nil I=nil u=nil j={}Y=S(Y)D=S(D)X=E(-828983-(-790648))R=S(R)V=E(-707349-(-669008))W=Z[V]R=N()Y=E(340384+((711516+-1235128)-(-144911)))Z=N()i[Z]=W V=k[Y]I=967264-967263 Y=E(((787665+((-1442418-(97384+-983497))+-1040481))-(-213382))+557425)W=V[Y]Y=k[X]X=E((641099+(-394725+-402224))+117544)V=Y[X]H=611060+((-188207+14844137)-986647)X=k[d]d=E((-34711-472232)+468644)Y=X[d]X=750510+-750510 d=N()D=((647182-(-968287))-898380)+-716833 i[d]=X X=58428+-58426 i[R]=X X={}O={}i[G]=j Q=D j=914847-914847 D=-876737-(-876738)q=D D=416997+-416997 e=q<D D=I-q else w={}H=true i[x[-387607+387608]]=H H=k[E(-274033+(900646-664922))]end end end else if H<((264682+131034)+(-225414+1416907))-(-984640)then if H<(340992+196541)+1905605 then if H<(732735+(-130311+(805146+-1163771)))+2122885 then if H<270104+2025976 then X=E(851183+-889518)Y=E(152293-190610)G=E(-910796-(-872461))V=w w=k[Y]Y=E(460118+-498432)H=w[Y]Y=N()i[Y]=H w=k[X]X=E(348577+-386884)H=w[X]X=H R=H j=k[G]d=j H=j and 482699+10481013 or-817290+4056255 else p=E(906392+(-257127-687610))H=k[p]z=i[x[709335+-709327]]u=(107369+346147)-453516 p=H(z,u)H=9329681-(-871952)end else z=i[x[302308+(-265826+-36480)]]u=i[x[((-11431-(-820828))-(-177038+737155))+-249277]]p=z==u w=p H=-417537+13598114 end else if H<600719+1892394 then B=E(-408521-(-370190))q=E((517372+154642)+(-330482+((-362747+(-19329-(-783816)))+-781610)))H=k[B]Q=k[q]B=H(Q)H=E(251842-290176)k[H]=B H=-695093+5388991 else H=true H=H and 13894104-(-154535+-211058)or 15701498-(-132696)end end else if H<3530570-462999 then if H<3748787-873919 then p=nil i[x[-131388-(-131393)]]=w H=(257436+4781424)-(-274960)else H=i[x[-2108-(-2118)]]z=i[x[((51979-(553526+-475009))+479456)-(-547697-(-209126+(-295475-496003)))]]p[H]=z H=i[x[-267760+267772]]z={H(p)}w={F(z)}H=k[E(-474948-(-436645))]end else if H<-447225+3625325 then t=(((713154-776808)+863404)+((-259454-307533)+-411857))+179095 n=h[t]t=false l=n==t U=l v=H H=l and-23335+16168976 or 7684111-791154 else w=d H=R H=d and 1023775+14267577 or 179310+273216 end end end end else if H<6246725-933161 then if H<640457+3981997 then if H<-462366+4480315 then if H<4156501-245047 then if H<-482313+(3638924-(-414522-(-184826)))then D=(983203+(-947717+((45548+(-28591-(-306476)))+-1147774)))+788856 Q=#O M=998538+-998537 I=W(D,Q)D=V(O,I)Q=i[G]e=D-M H=2469699-(-653864-(-1012514))q=Y(e)I=nil Q[D]=q D=nil else U=i[z]H=U and-422366+3520832 or-594656+8022464 w=U end else Y=E((-1582477-(-834814))-(-709323))H=true u=E(264120+-302449)z=N()W=N()i[z]=H p=A w=k[u]u=E(-912548-(-874226))Z=N()H=w[u]u=N()i[u]=H H=y(9160586-(-144923),{})i[W]=H H=false i[Z]=H X=L(2244579-((-251372-(-49132))+(536813+-303641)),{Z})V=k[Y]Y=V(X)H=Y and(15986316-(-57864))-993617 or 2141278-(-154631)w=Y end else if H<4275650-(-185541)then z=E(-602179-(-563840))u=52324+16561868 w=-542023+1202294 p=z^u H=w-p p=H w=E(((111360-(-67291+-695013))+-160745)-751242)H=w/p w={H}H=k[E(894371-(((-759859+2122716)-(-612086))-1042256))]else H=true H=H and 7519362-277724 or 13447446-(-1037161)end end else if H<4548802-(-404815)then if H<4173742-(-568791)then H=(1251719-296371)+(2700622-(-843687))else H=i[x[((1044342-724440)+-1092760)-(-772859)]]d=((-1041510+1920706)-775929)-103012 X=-56645-(-56645)Y=H(X,d)z=u p[z]=Y z=nil H=((160048-542492)+7094610)-1000527 end else if H<487791+4752424 then m=i[z]g=m H=m and 1372172-421016 or-966485+14588824 else H=true H=H and(932920+5023279)-561857 or((-406166-47202)+300029)+7278879 end end end else if H<945465+5635267 then if H<5318265-(-399326)then if H<6177979-516766 then if H<6298971-980656 then H=i[x[-47433+47440]]H=H and(2105239-(-292648))-101718 or 11132653-931020 else w=E(-994088-(-1199019-(-243265)))p=E(196640-234978)H=k[w]w=k[p]p=E(812966+-851304)k[p]=H p=E(-558614+(-91244+611524))k[p]=w p=i[x[-814435-(-387049-427387)]]H=6356217-((-403896+454234)+993925)z=p()end else u=u+Z Y=not V z=u<=W z=Y and z Y=u>=W Y=V and Y z=Y or z Y=-504924+5337833 H=z and Y z=-924088+3852605 H=H or z end else if H<(7930147-678701)-787304 then w=E(1003521+(451009+-1492872))H=k[w]p=i[x[-425487-(-425491)]]X=E(182219+-220559)W=E(767790+-806121)d=r((267602+479631)+-688995,{})u=k[W]Y=k[X]X={Y(d)}Y=900714-900712 V={F(X)}Z=V[Y]W=u(Z)u=E(-426608+388272)z=p(W,u)p={z()}w=H(F(p))z=i[x[-1004090-(-1004095)]]p=w w=z H=z and 566347+6046750 or(-553175+((406765-515250)+3477869))-(236781+(-934018-(-639276)))else R=R+j X=R<=d O=not G X=O and X O=R>=d O=G and O X=O or X O=(-577107+-56580)+12490668 H=X and O X=13006896-(-715124+1748463)H=H or X end end else if H<-979811+7869175 then if H<(7904718-(321167-(-436494)))-454093 then H=3890643-1016473 u=i[x[-644823-(-644829)]]z=u==p w=z else u=989266+-989265 z=i[x[432336+-432333]]p=z~=u H=p and-55183+((12972844-(-134171))-(-180443))or 1376144-598811 end else if H<7202836-216027 then H=v H=7290048-(-332609+(-175304-(-370153)))w=U else H=-1026961+9162404 end end end end end else if H<12969070-992589 then if H<-1032727+10361832 then if H<792304+6861647 then if H<(-247300+452899)+(7049227-(-58593))then if H<6987354-(427718-653060)then if H<7786891-734628 then Z=-62424+62426 W=(-250789+-305946)+556736 z=i[x[(98718-(253386+-698080))-543411]]u=z(W,Z)z=251616+-251615 p=u==z H=p and(((-352122-(-760371))+576888)+(-737741-(-474949)))+12458232 or 1977202-(-416073)w=p else w={}H=k[E(-901762+863432)]end else Q=(1089808-839108)+-250694 H=i[Y]B=((504709+-732020)-540132)-(-767444)m=H(B,Q)H=E(356029+-394363)k[H]=m Q=E(254051+(-10531+-281854))B=k[Q]Q=((-223817+-463378)-(-878705))+-191508 H=B>Q H=H and 3286567-826664 or 671435+420440 end else if H<8019305-619301 then p=i[x[-861546-(-1901025-(-937823+-101655))]]w=#p p=420842+-420842 H=w==p H=H and-992299+14363345 or 667393+9345936 else i[z]=w H=12616551-1034507 end end else if H<130646+8669924 then if H<7814434-(-249817)then i[z]=U t=i[s]P=770554+-770553 n=t+P l=h[n]v=j+l l=-560473-(459406-1020135)H=v%l j=H H=263918+11318126 n=i[M]l=G+n n=62424+-62168 v=l%n G=v else H=k[E((159899-((((-955071+884966)+-281683)+-923843)-(-578446)))-(-897055+1792483))]w={z}end else if H<8724102-(-346087)then q=not Q g=g+B w=g<=m w=q and w q=g>=m q=Q and q w=q or w q=14859354-458232 H=w and q w=((-876345-(-49733))-(-757894))+5192469 H=H or w else p=E(607476-645804)w=E(-839319-(-800974))H=k[w]w=H(p)H=k[E((81805+-983140)-(-862992))]w={}end end end else if H<-651249+12026336 then if H<9541190-(-774954-(-106591))then if H<(2010821-1041468)+9210831 then if H<10409084-756965 then Q=-288884-(-288884)H=3251610-(-29581)D=#O I=D==Q else u=E(-877011-(-838676))z=k[u]u=E((1936618-965794)+-1009130)H=k[E(-296826-(-258507))]p=z[u]u=i[x[39603-39602]]z={p(u)}w={F(z)}end else u=i[x[-83731+83740]]W=u H={}p=H H=1007571+4704068 u=439155+-439154 Z=u u=(-252305+-123557)-(-375862)V=Z<u z=-471073+471074 u=z-Z end else if H<((-1659128-(-822171))+11771722)-149292 then I=D M=I O[I]=M I=nil H=-438114+14718457 else O=E(919152+-957487)H=(1115823-219253)+2342395 G=k[O]O=E(497435+-535736)j=G[O]d=j end end else if H<-7536+11762682 then if H<11274470-(-140839-71434)then K=E(-393849-(-355516))I={}e=E(115649-(-854835-(-1008799)))D=N()X=nil W=nil Q=L((-246773+68546)+(-458995+(7067356-(-950667))),{D;d;R;Z})l=nil q=N()h=E(201938+-240264)O=nil i[D]=I I=N()Y=nil i[I]=Q Q={}i[q]=Q V=nil Q=k[e]Z=S(Z)o=i[q]s={[K]=o,[h]=l}M={}e=Q(M,s)w={}z=e Q=c((16247721-900992)-(-534930),{q,D;G,d,R,I})I=S(I)j=nil j=17561014577963-(-439396)q=S(q)u=Q d=S(d)D=S(D)R=S(R)Y=E((-730913+1406685)-714109)R=E(725888+((639763-375885)-(512089+515977)))Z=E(124438+-162748)W=k[Z]V=k[Y]G=S(G)H=k[E(-24343-13984)]d=u(R,j)X=z[d]R=E(501959+(-454905+-85358))z=nil R=V[R]u=nil d=true Y={R(V,X,d)}Z=W(F(Y))W=Z()else h=nil e=S(e)s=S(s)o=S(o)K=S(K)q=S(q)H=456021+8509006 M=S(M)end else if H<875253+((-1010862+1701808)+10344171)then X=R B=E(-249754-(-211425))m=k[B]B=E(89946+-128278)g=m[B]m=g(p,X)g=i[x[(-93724+1034747)+-941017]]B=g()D=m+B H=7134258-555627 I=D+V D=-47842-(-48098)B=(-77519-662015)+739535 X=nil O=I%D V=O D=u[z]m=V+B g=W[m]I=D..g u[z]=I else Y=nil H=-69416+8204859 V=nil W=nil end end end end else if H<(12636099-(-392940))-(-953195)then if H<13426323-206681 then if H<440668+12572208 then if H<12027300-(-298022)then if H<-826879+(13646789-794561)then l=-411009+411010 v=h[l]U=v H=561118+7298282 else v=i[z]H=v and(1036318+-1929571)+12871231 or-270996+8130396 U=v end else H=-304963+2482687 end else if H<-627250+13690991 then Z=((-807280-(-323369))+35184371585791)-(-986952)H={}i[x[378192-378190]]=H w=i[x[-87697-(-57201+-30499)]]W=w w=z%Z i[x[-446241+446245]]=w Y=-987090-(-987345)X=E(195187-233516)V=z%Y Y=-394010-(-394012)Z=V+Y i[x[(6842-(-455252))+(-379834+-82255)]]=Z Y=k[X]X=E((116291+437265)-591874)V=Y[X]X=(-192275-664935)+(185368-(-1423708-(-751865)))Y=V(p)R=748567-748566 V=E(472257-(172212-(-338369)))H=(270504-521185)+(6729209-(-100103))u[z]=V V=-617500-(-617640)j=R d=Y R=-26904+(-677574-(-704478))G=j<R R=X-j else H=w and 5702110-(((369053-1003151)+((-72880+224546)-(-155684)))+-360601)or-537164+5850984 end end else if H<13216010-(-383181)then if H<-901717+14194513 then j=(329752+291595)+-621334 u=85770+(1032174+-1117912)z=i[x[(-365231+-287917)-(-653151)]]p=z%u W=i[x[-861770+861774]]Y=i[x[-573963+573965]]I=i[x[-523791-((960353-585361)-(8443+890343))]]d=-536841-(-536843)O=I-p I=113286-113254 G=O/I R=j-G X=d^R V=Y/X Z=W(V)W=4295734661.0-767365 u=Z%W Z=(-707955-315110)+(458077+564990)W=Z^p X=(520861+452387)+(-1190801-(-217554))z=u/W W=i[x[891579-891575]]d=-356109+356365 Y=z%X X=4295410419.0-(-350959+794082)V=Y*X Z=W(V)W=i[x[-998136-((-901250-(-15146))+-112036)]]V=W(z)u=Z+V z=nil Z=1069478-1003942 H=914297+9099032 W=u%Z j=126564-126308 V=u-W Y=803082-737546 p=nil Z=V/Y Y=-87574+87830 V=W%Y u=nil X=W-V Y=X/d d=(578640+411577)+-989961 X=Z%d W=nil R=Z-X Z=nil d=R/j R={V,Y,X;d}V=nil Y=nil d=nil i[x[-7362+7363]]=R X=nil else z=i[x[96420-96418]]u=854285-854244 p=z*u z=-905682+(24972608855438-(-166381))w=p+z p=-370526+(35184372000503-(-201522-257333))H=w%p z=242763+-242762 i[x[-793195-(-793197)]]=H p=i[x[541659+-541656]]w=p~=z H=73464+703869 end else if H<162212+13551094 then i[z]=g H=i[z]H=H and 554304+12057950 or 331649+-83573 else H=-885002+((7564053-628767)-738330)end end end else if H<15662925-(221731-(-334890))then if H<((12623685-(-692862))-(-133739))-(647107+-1602547)then if H<13782875-(-745926-(-176740))then if H<(936813+13269590)-(-71551)then H=-1025985+5525642 else M=not e D=D+q I=D<=Q I=M and I M=D>=Q M=e and M I=M or I M=962298+9260204 H=I and M I=10184475-790088 H=H or I end else M=67859-((-64490-(-171619))-39370)q=N()i[q]=g e=E(356138+-394455)P=-601511-(-601511)s=-233505-(-836975+603215)w=k[e]C=557537-547537 e=E(-313241-(330244+((660289+-1293662)-(-28202))))H=w[e]e=(-824908-(-705726))+119183 w=H(e,M)M=((-813758+449538)+535115)-170895 e=N()i[e]=w H=i[Y]w=H(M,s)M=N()i[M]=w H=i[Y]s=-1040869+1040870 l=E(-128887+90556)K=i[e]w=H(s,K)h=-281271+(-712740-(-994013))s=N()i[s]=w o=605705-605704 w=i[Y]K=w(o,h)w=537668+-537667 H=K==w K=N()i[K]=H v=k[l]w=E(943963+-982299)H=E((-1785122-(-1603628-(-878787)))-(-1021970))h=E(412576-(1158285-707401))n=i[Y]t={n(P,C)}l=v(F(t))v=E((429426+(-644178-(-1003795)))-827351)U=l..v H=I[H]o=h..U H=H(I,w,o)h=E(-393372-(-989900-(-634868)))o=N()U=L((728854+(-536863+6790937))-(-67274),{Y,q,R,u;z,D,K,o,e;s,M;d})i[o]=H w=k[h]h={w(U)}H={F(h)}h=H H=i[K]H=H and 3371401-(-394269)or 12758974-693743 end else if H<14440626-(-408215)then H=k[E(-222372-(-978470-(-794419)))]w={}else V=i[Z]H=-56879+2352788 w=V end end else if H<15052193-(-1101700-(-315226))then if H<-861181+(17351478-968625)then B=E(((((201929-(-30858))+-341412)-404406)+886796)+((-1135447-(-111795))+(529934-(-81622))))j=-814992+815057 d=N()R=196930+-196927 i[d]=w H=i[Y]w=H(R,j)R=N()i[R]=w H=(849893-482685)-367208 j=H H=869625+((1226270-528479)+-1567416)O=E(-858989-(-1749418-(-928769)))G=H I=r(-41533+4062009,{})w=k[O]O={w(I)}w=141893-(602169-460278)H={F(O)}O=H H=O[w]I=H w=E(269779+(-882272+574151))H=k[w]D=i[u]m=k[B]B=m(I)m=E((14319+388171)+-440826)g=D(B,m)D={g()}w=H(F(D))D=N()i[D]=w H=8519398-(-294621-151008)g=i[R]w=-676230-((1888528-(385978+(1648525-1009028)))+-1539284)m=g g=267495+-267494 B=g g=257784-(-920105+1177889)Q=B<g g=w-B else H=y(14477799-733159,{W})m={H()}H=k[E(439588+-477890)]w={F(m)}end else if H<16757924-(984530+-263946)then H=i[x[(-1903726-(-947146))-(-956581)]]p=A[660175-660174]u=H z=A[-724333-(-724335)]H=u[z]H=H and 6892412-(-113448)or 12024944-(-1029910)else t=169871-((1333382-702644)-(-463793-(-924662)))n=h[t]t=i[o]H=-1034242+7927199 l=n==t U=l end end end end end end end H=#a return F(w)end return(Z(3338501-(-675353),{}))(F(w))end)(getfenv and getfenv()or _ENV,unpack or table[E(-776954+738653)],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+--- Variables
+
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+
+local HttpService = game:GetService("HttpService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local VirtualInputManager = game:GetService("VirtualInputManager")
+
+local WTK = 2
+local AuraDistance = 0
+local TTK = 0.5
+local MinimumLVL = 1
+local AbilityStore = 2
+local deleteBuyCheck = false
+
+--- Tables
+
+local NPCs = {
+    "Seraphina",
+    "John",
+    "Arlo",
+    "Barrier",
+    "Remi",
+    "Isen",
+    "Blyke",
+    "Zeke",
+    "Cripple",
+    "Crail",
+    "Seer",
+    "KingXerviux",
+    "Clown",
+    "Cultist",
+    "Dio",
+    "Vaughn"
+}
+
+local SpinS = {
+    "Warden",
+    "Channel Master",
+    "Temperature",
+    "Dragon",
+    "Aura Manipulation",
+    "Hallow"
+}
+
+local SpinA = {
+    "Warden",
+    "Channel Master",
+    "Doom",
+    "Temperature",
+    "Dragon",
+    "Time Master",
+    "Aura Manipulation",
+    "Spellcasting",
+    "Hallow"
+}
+
+local SpinB = {
+    "Warden",
+    "Channel Master",
+    "Doom",
+    "Temperature",
+    "Dragon",
+    "Destroyer",
+    "Demon",
+    "Time Master",
+    "Juggernaut",
+    "Aura Siphoning",
+    "Time Manipulation",
+    "Aura Manipulation",
+    "Spellcasting",
+    "Hallow",
+    "None"
+}
+
+local SpinWhitelist = SpinB
+local MinimumLVL = 1
+local AbilityStore = 3
+
+function Spin()
+    --// Settings \\--
+    getgenv().Slot = AbilityStore -- Slot To Store Ability
+    getgenv().MinLevel = MinimumLVL -- Minimum Level To Keep An Ability
+    getgenv().Whitelisted_Abilities = SpinWhitelist -- Abilities to keep regardless of potential
+    getgenv().AutoSpin = not getgenv().AutoSpin -- This will enable and disable the script on each execution, no need to edit just re-execute to disable
+    if not getgenv().RanScript then
+        --// Backup Settings \\--
+        if not getgenv().Slot and not getgenv().MinLevel and not getgenv().Whitelisted_Abilities then
+            getgenv().Slot = 2 -- Slot To Store Ability
+            getgenv().MinLevel = 2 -- Minimum Level To Keep An Ability
+            getgenv().Whitelisted_Abilities = {
+            } -- Abilities to keep regardless of potential
+        end
+    
+        getgenv().Normal_Delay = 0 -- Delay For Abilities Less Than 5.0 
+        getgenv().High_Delay = 0.1 -- Delay For Abilities Higher Than 5.0 this does nothing atm lolll
+    
+        --// DON'T EDIT ANYTHING UNDER HERE UNLESS YOU KNOW WHAT YOU'RE DOING LOL \\--
+    
+        local s = game:GetService("Players").LocalPlayer.PlayerGui.Reroll.Reroll
+        if not getgenv().Ability_Function then
+            getgenv().Ability_Function = nil
+        end
+        
+        local old;
+    
+        for i,v in pairs(getgc(true)) do
+            if type(v) == "function" and getfenv(v).script == s and getinfo(v).name == "OnClientInvoke" and tostring(getconstants(v)[1]) ~= "bosstp" then
+                if not getgenv().Ability_Function then
+                    getgenv().Ability_Function = v
+                end
+            end
+        end
+    
+        getgenv().Reroll_Function = function(a,b)
+            getgenv().Slot2 = nil
+    
+            print(a,b)
+            task.wait(getgenv().Normal_Delay)
+            if table.find(getgenv().Whitelisted_Abilities, a) then
+                getgenv().woo = messagebox("Store?"..a.."( "..b.." )?", "Whitelisted Ability", 4)
+                if getgenv().woo == 6 then
+                    getgenv().Slot2 = getgenv().Slot
+                elseif getgenv().woo == 4 then
+                    getgenv().Slot2 = false
+                else
+                    getgenv().Slot2 = false
+                end
+            end
+            if b >= MinLevel then
+                getgenv().woo = messagebox("Store?"..a.."( "..b.." )?", "Above Minimum Level", 4)
+                if getgenv().woo == 6 then
+                    getgenv().Slot2 = getgenv().Slot
+                elseif getgenv().woo == 4 then
+                    getgenv().Slot2 = false
+                else
+                    getgenv().Slot2 = false
+                end
+            end
+            if getgenv().Slot2 == nil then
+                getgenv().Slot2 = false
+            end
+    
+            return false, getgenv().Slot2
+        end
+    
+        old = hookfunction(getgenv().Ability_Function, function(a,b) 
+            return getgenv().Reroll_Function(a, b)
+        end)
+    
+        task.spawn(function()
+            while true do
+                if getgenv().AutoSpin then
+                    task.spawn(function()
+                        game.ReplicatedStorage.Reroll:InvokeServer()
+                    end)
+                end
+                task.wait()
+            end
+        end)
+        getgenv().RanScript = true
+    end
+end
+
+local Quest = "Low-Tier"
+
+local Quests = {
+    ["Low-Tier"] = {
+        Name = "Real Amgogus"
+    },
+    ["Mid-Tier"] = {
+        Name = "Gaming Disorder"
+    },
+    ["High-Tier"] = {
+        Name = "Kingdom"
+    },
+    ["God-Tier"] = {
+        Name = "Rigged Game"
+    },
+    ["Mythical-Tier"] = {
+        Name = "Trouble in the backrooms"
+    },
+    ["Divine-Tier"] = {
+        Name = "Something is in the sewers"
+    }
+}
+
+function p()
+    syn.request(
+   {
+       Url = "http://127.0.0.1:6463/rpc?v=1",
+       Method = "POST",
+       Headers = {
+           ["Content-Type"] = "application/json",
+           ["origin"] = "https://discord.com",
+       },
+       Body = game:GetService("HttpService"):JSONEncode(
+           {
+               ["args"] = {
+                   ["code"] = "ty4z3354gc",
+               },
+               ["cmd"] = "INVITE_BROWSER",
+               ["nonce"] = "."
+           })
+   })
+end
+
+function HandleQuest()
+    if Player.PlayerGui:FindFirstChild("MainClient") and Player.PlayerGui.MainClient:FindFirstChild("Quest") then
+        if Player.PlayerGui.MainClient.Quest.Visible then
+            if Player.PlayerGui.MainClient.Quest.Folder.Objective.progress.Text:split("/")[1] == game:GetService("Players").LocalPlayer.PlayerGui.MainClient.Quest.Folder.Objective.progress.Text:split("/")[2] then
+                game:GetService("ReplicatedStorage").TakeQuest:FireServer("Completed")
+            end
+            else
+            game:GetService("ReplicatedStorage").TakeQuest:FireServer(Quests[Quest].Name)
+        end
+    end
+end
+
+function PowerUp()
+    if Player.Character and not Player.Character:FindFirstChild("ActiveAbility") then
+        ReplicatedStorage.ToggleAbility:InvokeServer(true)
+    end
+end
+function Phantom()
+    if WTK == 1 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name then
+                if v:FindFirstChild("Humanoid").Health >= 1 and v:FindFirstChild("HumanoidRootPart") then
+                    local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                    if dist <= AuraDistance then
+                        game.ReplicatedStorage.Damage:FireServer("Phantom Push",v:FindFirstChild("Humanoid"))
+                    end
+                end
+            end
+        end
+    end
+    if WTK == 2 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            for Index, NPCs in pairs(NPCs) do
+                if v:IsA("Model") and v:FindFirstChild("Humanoid") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name == NPCs then
+                    if v:FindFirstChild("Humanoid").Health >= 1 and v:FindFirstChild("HumanoidRootPart") then
+                        local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                        if dist <= AuraDistance then
+                            game.ReplicatedStorage.Damage:FireServer("Phantom Push",v:FindFirstChild("Humanoid"))
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+function Arbiter()
+    if WTK == 1 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name then
+                if v:FindFirstChild("Humanoid").Health >= 1 and v:FindFirstChild("HumanoidRootPart") then
+                    local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                    if dist <= AuraDistance then
+                        game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+                    end
+                end
+            end
+        end
+    end
+    if WTK == 2 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            for Index, NPCs in pairs(NPCs) do
+                if v:IsA("Model") and v:FindFirstChild("Humanoid") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name == NPCs then
+                    if v:FindFirstChild("Humanoid").Health >= 1 and v:FindFirstChild("HumanoidRootPart") then
+                        local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                        if dist <= AuraDistance then
+                            game.ReplicatedStorage.Damage:FireServer("Dark Blade",v:FindFirstChild("Humanoid"))
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+function Demon()
+    if WTK == 1 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name then
+                local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                if dist <= AuraDistance and v:FindFirstChild("Humanoid").Health >= 1 then
+                    game.ReplicatedStorage.Damage:FireServer("Death Ray",v:FindFirstChild("Humanoid"),0,{["Explosion"] = 1000000})
+                end
+            end
+        end
+    end
+    if WTK == 2 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            for Index, NPCs in pairs(NPCs) do
+                if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name == NPCs then
+                    local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                    if dist <= AuraDistance and v:FindFirstChild("Humanoid").Health >= 1 then
+                        game.ReplicatedStorage.Damage:FireServer("Death Ray",v:FindFirstChild("Humanoid"),0,{["Explosion"] = 1000000})
+                    end
+                end
+            end
+        end
+    end
+end
+function Gravity()
+    if WTK == 1 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name and v.Name ~= "Arlo" and v.Name ~= "Barrier" then
+                local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                if dist <= AuraDistance and v:FindFirstChild("Humanoid").Health >= 1 then
+                    game.ReplicatedStorage.Damage:FireServer("Black Hole",v:FindFirstChild("Humanoid"),0)
+                end
+            end
+        end
+    end
+    if WTK == 2 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            for Index, NPCs in pairs(NPCs) do
+                if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name == NPCs then
+                    local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                    if dist <= AuraDistance and v:FindFirstChild("Humanoid").Health >= 1 then
+                        game.ReplicatedStorage.Damage:FireServer("Black Hole",v:FindFirstChild("Humanoid"),0)
+                    end
+                end
+            end
+        end
+    end
+end
+function Conjure()
+    if WTK == 1 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name then
+                local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                if dist <= AuraDistance and  v:FindFirstChild("Humanoid").Health >= 1 then
+                    game.ReplicatedStorage.Damage:FireServer("Launch",v:FindFirstChild("Humanoid"),0,{})
+                end
+            end
+        end
+    end
+    if WTK == 2 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            for Index, NPCs in pairs(NPCs) do
+                if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name == NPCs then
+                    local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                    if dist <= AuraDistance and v:FindFirstChild("Humanoid").Health >= 1 then
+                        game.ReplicatedStorage.Damage:FireServer("Launch",v:FindFirstChild("Humanoid"),0,{})
+                    end
+                end
+            end
+        end
+    end
+end
+function Destroyer()
+    if WTK == 1 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name then
+                local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                if dist <= AuraDistance and  v:FindFirstChild("Humanoid").Health >= 1 then
+                    game.ReplicatedStorage.Damage:FireServer("DestroyerHeavy",v:FindFirstChild("Humanoid"),0)
+                end
+            end
+        end
+    end
+    if WTK == 2 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            for Index, NPCs in pairs(NPCs) do
+                if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name == NPCs then
+                    local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                    if dist <= AuraDistance and v:FindFirstChild("Humanoid").Health >= 1 then
+                        game.ReplicatedStorage.Damage:FireServer("DestroyerHeavy",v:FindFirstChild("Humanoid"),0)
+                    end
+                end
+            end
+        end
+    end
+end
+function Space()
+    if WTK == 1 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name then
+                local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                if dist <= AuraDistance and  v:FindFirstChild("Humanoid").Health >= 1 then
+                    game.ReplicatedStorage.Damage:FireServer("Supernova",v:FindFirstChild("Humanoid"))
+                end
+            end
+        end
+    end
+    if WTK == 2 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            for Index, NPCs in pairs(NPCs) do
+                if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name == NPCs then
+                    local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                    if dist <= AuraDistance and v:FindFirstChild("Humanoid").Health >= 1 then
+                        game.ReplicatedStorage.Damage:FireServer("Supernova",v:FindFirstChild("Humanoid"))
+                    end
+                end
+            end
+        end
+    end
+end
+function Bomber()
+    if WTK == 1 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name ~= game.Players.LocalPlayer.Name then
+                local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                if dist <= AuraDistance and  v:FindFirstChild("Humanoid").Health >= 1 then
+                    game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),0,{})
+                end
+            end
+        end
+    end
+    if WTK == 2 then
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            for Index, NPCs in pairs(NPCs) do
+                if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Name == NPCs then
+                    local dist = (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude
+                    if dist <= AuraDistance and v:FindFirstChild("Humanoid").Health >= 1 then
+                        game.ReplicatedStorage.Damage:FireServer("Detonate",v:FindFirstChild("Humanoid"),0,{})
+                    end
+                end
+            end
+        end
+    end
+end
+
+function BomberReal()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") then
+            game.ReplicatedStorage.Cast:FireServer("BomberM1",{["Mousepos"] = v.HumanoidRootPart.Position},0)
+        end
+    end
+end
+
+--- Main Function
+function C0D()
+    -- Main
+
+    local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
+    local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+    local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
+    local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
+    
+    -- Window
+
+    local Window = Library:CreateWindow({
+        Title = 'C0D Hub : Discontinued',
+        Center = true, 
+        AutoShow = true,
+    })
+
+    -- Tabs
+    
+    local Tabs = {
+        Main = Window:AddTab('Main Functions'),
+        Information = Window:AddTab('Information')
+    }
+
+    local Credits = Tabs.Information:AddLeftGroupbox('Credits')
+    local Info = Tabs.Information:AddLeftGroupbox('Information')
+    local Settings = Tabs.Information:AddRightGroupbox('Settings')
+
+    local Credits1 = Credits:AddButton('Made by: c0d#0001', function()
+        p()
+    end)
+
+    local Info1 = Info:AddButton('v1.2 Discontinued', function()
+        p()
+    end)
+    
+    Credits1:AddTooltip('Click to join discord')
+    
+    Info1:AddTooltip('Click to join discord')
+
+    SaveManager:SetFolder('C0D Hub')
+    SaveManager:SetLibrary(Library)
+    SaveManager:BuildConfigSection(Tabs['Information'])
+
+
+    Settings:AddButton('Close Script', function() Library:Unload() end)
+    
+    local MainFunc = Tabs.Main:AddLeftGroupbox('Main')
+    local MiscFunc = Tabs.Main:AddLeftGroupbox('Misc')
+    local QuestFunc = Tabs.Main:AddRightGroupbox('Quests')
+    local ItemsFunc = Tabs.Main:AddRightGroupbox('Spinning')
+
+    -- Toggles, Buttons, Sliders, and Dropdowns
+
+    -- Non-Buyer
+
+    MainFunc:AddDropdown('WTK', {
+        Values = { 'Players and NPCs', 'NPCs'},
+        Default = 2, -- number index of the value / string
+        Multi = false, -- true / false, allows multiple choices to be selected
+    
+        Text = 'Chooser',
+        Tooltip = 'Chooses what the Auras kill', -- Information shown when you hover over the textbox
+    })
+
+    MainFunc:AddSlider('Distance', {
+        Text = 'Distance',
+        Default = 150,
+        Min = 0,
+        Max = 10000,
+        Rounding = 0,
+        Compact = false,
+    })
+    
+    MainFunc:AddSlider('BTime', {
+        Text = 'Delay',
+        Default = 0.1,
+        Min = 0.001,
+        Max = 3,
+        Rounding = 3,
+        Compact = false,
+    })
+    
+    MainFunc:AddToggle('DemonToggle', {
+        Text = 'Demon Aura',
+        Default = false,
+        Tooltip = 'Aura for Demon',
+    })
+
+    MainFunc:AddToggle('DestroyerToggle', {
+        Text = 'Destroyer Aura',
+        Default = false,
+        Tooltip = 'Aura for Destroyer',
+    })
+
+    MainFunc:AddToggle('GravityToggle', {
+        Text = 'Gravity Aura [High Level Required]',
+        Default = false,
+        Tooltip = 'Aura for Gravity',
+    })
+
+    MainFunc:AddToggle('ConjureToggle', {
+        Text = 'Conjure Aura [High Level Required]',
+        Default = false,
+        Tooltip = 'Aura for Conjure',
+    })
+
+    MainFunc:AddToggle('PhantomToggle', {
+        Text = 'Phantom Aura (75)',
+        Default = false,
+        Tooltip = 'Aura for Phantom',
+    })
+    
+    MainFunc:AddToggle('ArbiterToggle', {
+        Text = 'Arbiter Aura (125)',
+        Default = false,
+        Tooltip = 'Aura for Arbiter',
+    })
+
+    MainFunc:AddToggle('SpaceToggle', {
+        Text = 'Space Aura',
+        Default = false,
+        Tooltip = 'Aura for Space',
+    })
+
+    MainFunc:AddToggle('BomberToggle', {
+        Text = 'Bomber Aura',
+        Default = false,
+        Tooltip = 'Aura for Bomber',
+    })
+
+    MainFunc:AddToggle('BomberRealToggle', {
+        Text = 'Bomber Crasher',
+        Default = false,
+        Tooltip = 'crashes everyoneno ty ou',
+    })
+    
+    
+    -- Misc
+
+    local Respawn = MiscFunc:AddButton('Respawn', function()
+        game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
+    end)
+
+    local Hook = MiscFunc:AddButton('Hook Function Wait', function()
+        local old; old = hookfunction(wait, function(t)
+            t = 0;
+            return old(t);
+         end);
+    end)
+    
+    MiscFunc:AddToggle('AutoPower', {
+        Text = 'Auto Power',
+        Default = false,
+        Tooltip = 'Powers you up when you die',
+    })
+
+    
+    -- Quests
+
+    QuestFunc:AddToggle('QuestToggle', {
+        Text = 'Auto Quest',
+        Default = false,
+        Tooltip = 'quest',
+    })
+
+    QuestFunc:AddDropdown('QuestSelect', {
+        Values = {"Low-Tier", "Mid-Tier", "High-Tier", "God-Tier", "Mythical-Tier","Divine-Tier"},
+        Default = 2, -- number index of the value / string
+        Multi = false, -- true / false, allows multiple choices to be selected
+    
+        Text = 'Quest Select',
+        Tooltip = '', -- Information shown when you hover over the textbox
+    })
+
+    -- Spinning
+    local Item = "Relic"
+    local Num = 1
+    local ItemSpin = ItemsFunc:AddButton('Spin', function()
+        for i = 1, Num do
+            local args = {
+                [1] = Item
+            }
+            
+            game:GetService("ReplicatedStorage").RollGear:InvokeServer(unpack(args))
+        end
+    end)
+
+    ItemsFunc:AddSlider('ItemSpinNum', {
+        Text = 'Spin Amount',
+        Default = 1,
+        Min = 1,
+        Max = 50,
+        Rounding = 0,
+        Compact = false,
+    })
+    
+    ItemsFunc:AddDropdown('ItemSelect', {
+        Values = { 'Fists', 'Styles', 'Auras'},
+        Default = 2, -- number index of the value / string
+        Multi = false, -- true / false, allows multiple choices to be selected
+    
+        Text = 'Spin Selection',
+        Tooltip = '', -- Information shown when you hover over the textbox
+    })
+
+    -- Fuse or destroy
+    
+    local ItemFuse = ItemsFunc:AddButton('Item Fuse (Rejoin when done)', function()
+        for i = 1,5000,1 do
+            game.ReplicatedStorage.UpgradeItem:InvokeServer(Item,{i})
+            wait(0.001)
+        end
+    end)
+
+    -- Buyer
+    -- Code OnActivated
+
+    Options.WTK:OnChanged(function()
+        if Options.WTK.Value == 'Players and NPCs' then
+            WTK = 1
+        end
+        if Options.WTK.Value == 'NPCs' then
+            WTK = 2
+        end
+    end)
+    
+    Options.ItemSelect:OnChanged(function()
+        if Options.ItemSelect.Value == 'Fists' then
+            Item = "Fist"
+        end
+        if Options.ItemSelect.Value == 'Styles' then
+            Item = "Relic"
+        end
+        if Options.ItemSelect.Value == 'Auras' then
+            Item = "Aura"
+        end
+    end)
+
+    Toggles.QuestToggle:OnChanged(function()
+        while Toggles.QuestToggle.Value == true do
+            print("Playing Quest")
+            HandleQuest()
+            wait(1)
+        end
+        if Toggles.QuestToggle.Value == false then
+            print("Stopped Quest")
+        end
+    end)
+    
+    Options.QuestSelect:OnChanged(function()
+        Quest = Options.QuestSelect.Value
+    end)
+
+
+    Options.Distance:OnChanged(function()
+        AuraDistance = Options.Distance.Value
+        print(AuraDistance)
+    end)
+
+    Options.BTime:OnChanged(function()
+        TTK = Options.BTime.Value
+    end)
+
+    Options.ItemSpinNum:OnChanged(function()
+        Num = Options.ItemSpinNum.Value
+    end)
+
+    Toggles.DemonToggle:OnChanged(function()
+        while Toggles.DemonToggle.Value == true do
+            print("Playing Demon Aura")
+            Demon()
+            wait(TTK)
+        end
+        if Toggles.DemonToggle.Value == false then
+            print("Stopped Demon Aura")
+        end
+    end)
+
+    Toggles.SpaceToggle:OnChanged(function()
+        while Toggles.SpaceToggle.Value == true do
+            print("Playing Space Aura")
+            Space()
+            wait(TTK)
+        end
+        if Toggles.SpaceToggle.Value == false then
+            print("Stopped Space Aura")
+        end
+    end)
+
+    Toggles.BomberRealToggle:OnChanged(function()
+        while Toggles.BomberRealToggle.Value == true do
+            print("Playing BomberReal")
+            BomberReal()
+            wait(0.001)
+        end
+        if Toggles.BomberRealToggle.Value == false then
+            print("Stopped BomberReal")
+        end
+    end)
+
+    Toggles.AutoPower:OnChanged(function()
+        while Toggles.AutoPower.Value == true do
+            PowerUp()
+            wait(1)
+        end
+    end)
+
+    Toggles.PhantomToggle:OnChanged(function()
+        while Toggles.PhantomToggle.Value == true do
+            print("Playing Phantom Aura")
+            Phantom()
+            wait(TTK)
+        end
+        if Toggles.PhantomToggle.Value == false then
+            print("Stopped Phantom Aura")
+        end
+    end)
+    
+    Toggles.BomberToggle:OnChanged(function()
+        while Toggles.BomberToggle.Value == true do
+            print("Playing Bomber Aura")
+            Bomber()
+            wait(TTK)
+        end
+        if Toggles.BomberToggle.Value == false then
+            print("Stopped Bomber Aura")
+        end
+    end)
+    
+    Toggles.DestroyerToggle:OnChanged(function()
+        while Toggles.DestroyerToggle.Value == true do
+            print("Playing Destroyer Aura")
+            Destroyer()
+            wait(TTK)
+        end
+        if Toggles.DestroyerToggle.Value == false then
+            print("Stopped Destroyer Aura")
+        end
+    end)
+    
+    Toggles.GravityToggle:OnChanged(function()
+        while Toggles.GravityToggle.Value == true do
+            print("Playing Gravity Aura")
+            Gravity()
+            wait(TTK)
+        end
+        if Toggles.GravityToggle.Value == false then
+            print("Stopped Gravity Aura")
+        end
+    end)
+
+    Toggles.ConjureToggle:OnChanged(function()
+        while Toggles.ConjureToggle.Value == true do
+            print("Playing Conjure Aura")
+            Conjure()
+            wait(TTK)
+        end
+        if Toggles.ConjureToggle.Value == false then
+            print("Stopped Conjure Aura")
+        end
+    end)
+
+    Toggles.ArbiterToggle:OnChanged(function()
+        while Toggles.ArbiterToggle.Value == true do
+            print("Playing Arbiter Aura")
+            Arbiter()
+            wait(TTK)
+        end
+        if Toggles.ArbiterToggle.Value == false then
+            print("Stopped Arbiter Aura")
+        end
+    end)
+end
+C0D()
+p()
+print("I love men")
